@@ -1,0 +1,13 @@
+class Solution(object):
+    def minimumCost(self, cost):
+       cost.sort() 
+       took = 0
+       ans = 0
+       a = cost[::-1]
+       for i in range(len(a)):
+            if took ==2:
+                took = 0
+            else:
+                ans += a[i]
+                took+=1
+       return ans             
