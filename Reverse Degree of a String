@@ -1,0 +1,10 @@
+class Solution(object):
+    def reverseDegree(self, s):
+        temp =0
+        ans = 0
+        rev_val =0
+        for i in range(len(s)):
+            temp = 26 - (ord(s[i]) - ord('a'))
+            ans = (i+1) * temp
+            rev_val += ans 
+        return rev_val 
