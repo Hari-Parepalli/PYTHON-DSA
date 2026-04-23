@@ -1,0 +1,10 @@
+class Solution(object):
+    def replaceElements(self, arr):
+  
+     n = len(arr)
+     li = [-1] *n
+     ans = -1
+     for i in range(n-1,-1,-1):
+        li[i] = ans
+        ans = max(ans,arr[i])
+     return li     
