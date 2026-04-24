@@ -1,0 +1,10 @@
+from collections import Counter
+class Solution(object):
+ def uniqueOccurrences(self, arr):
+  j  = Counter(arr)  
+  li = list(j.values())
+  return len(li) == len(set(li))
+
+
+
+        
