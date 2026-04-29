@@ -1,0 +1,14 @@
+class Solution(object):
+    def finalPrices(self, prices):
+     stack = []
+     for i in range(len(prices)):
+        for j in range(i+1,len(prices)):
+            if prices[j] <= prices[i]:
+                stack.append(prices[i]-prices[j])
+                break
+        else:
+            stack.append(prices[i])
+     return stack                   
+
+
+        
