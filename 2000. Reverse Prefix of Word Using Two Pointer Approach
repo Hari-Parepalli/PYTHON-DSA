@@ -1,0 +1,18 @@
+class Solution(object):
+    def reversePrefix(self, word, ch):
+     arr = list(word)
+     end =-1
+     for i in range(len(arr)):
+        if word[i] == ch:
+            end = i
+            break
+     if end == -1:
+        return word
+     l,r = 0,end
+     while l <r:
+        arr[l],arr[r] = arr[r],arr[l]
+        l +=1
+        r-=1
+     a=''.join(arr) 
+     return a
+        
