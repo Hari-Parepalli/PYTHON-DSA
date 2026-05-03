@@ -1,0 +1,8 @@
+class Solution(object):
+    def rotateString(self, s, goal):
+        a = s+s
+        if len(s) == len(goal) and goal in a:
+            return True  
+        else:
+            return False      
+        
